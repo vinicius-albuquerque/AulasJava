@@ -8,6 +8,8 @@ public class Aula2 {
 		variaveis();
 		imprimindo();
 		entradaDeDados();
+		calcularIMC();
+		convertendoValores();
 	}
 	
 	static void variaveis() {
@@ -88,6 +90,61 @@ public class Aula2 {
 			System.out.printf("%s tem %d anos de idade",nome, idade);
 		}
 		
+	}
+	
+	static void calcularIMC() {
+		System.out.println("\n\n**Treinando calculos com IMC**");
+		Scanner scn = new Scanner(System.in);
+		boolean varCorreta = false;
+		double altura, peso, imc;
+		
+		System.out.println("\nVamos lá, precisamos calcular seu IMC");
+		
+		//altura
+		do {
+			System.out.println("\nQual sua altura?\nEm metros, utilize , para decimal");
+			altura = scn.nextDouble();
+			if(altura <= 0) {
+				System.out.println("Altura inválida, vamos tentar novamente.");
+			}
+			else {
+				varCorreta = true;
+			}
+		} while (varCorreta == false);
+		
+		varCorreta = false;
+		//peso
+		do {
+			System.out.println("\nQual seu peso?\nEm kilogramas, utilize , para decimal");
+			peso = scn.nextDouble();
+			if(peso <= 0) {
+				System.out.println("Peso inválido, vamos tentar novamente.");
+			}
+			else {
+				varCorreta = true;
+			}
+		} while (varCorreta == false);
+		
+		
+		imc = peso/(Math.pow(altura, 2));
+		
+		System.out.printf("\nSeu IMC é %.2f",imc);
+	}
+	
+	static void convertendoValores() {
+		System.out.println("\n\n**Treinando conversoes de valores**");
+		Scanner cnv = new Scanner(System.in);
+		
+		System.out.println("Parse de Double");
+		System.out.println("Insira um numero decimal, utilizando o separador `.`");
+		double conv = Double.parseDouble(cnv.nextLine());
+		System.out.printf("Numero com 2 casas decimais %.2f",conv);
+		
+		System.out.println("\nAgora int para string");
+		System.out.println("Insira um numero inteiro");
+		int valor = cnv.nextInt();
+		String texto = Integer.toString(valor);
+		System.out.println(texto.substring(0,1));
 	}
 
 }
