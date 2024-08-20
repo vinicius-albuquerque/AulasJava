@@ -1,4 +1,5 @@
 package aula2;
+import java.util.Scanner;
 
 public class Aula2 {
 
@@ -6,9 +7,12 @@ public class Aula2 {
 		// TODO Auto-generated method stub
 		variaveis();
 		imprimindo();
+		entradaDeDados();
 	}
 	
 	static void variaveis() {
+		
+		System.out.println("**Imprimindo variáveis diferentes**");
 		//iniciando variavel
 		int idade;
 		idade = 18;
@@ -35,11 +39,12 @@ public class Aula2 {
 	}
 	
 	static void imprimindo() {
+		System.out.println("\n\n**Imprimindo strings com format e normal**");
 		//imprimindo de outras formas
 		//2024-08-18
 		String nome = "W. Rato";
 		float sofaScore = 7.2f;
-		System.out.print("\nJogador: " + nome);
+		System.out.print("Jogador: " + nome);
 		System.out.print(" | nota Sofascore: " + sofaScore);
 		
 		
@@ -62,6 +67,27 @@ public class Aula2 {
 		sofaScore = 6.7f;	
 		System.out.print("\nJogador: " + nome);
 		System.out.format(" | nota Sofascore: %.1f", sofaScore);
+	}
+	
+	static void entradaDeDados() {
+		System.out.println("\n\n**Treinando entrada de dados**");
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Qual seu nome?");
+		String nome = in.nextLine();
+		System.out.println("Qual sua idade?");
+		int idade = in.nextInt();
+		
+		if(idade <0) {
+			System.out.printf("%s sua idade é negativa????????",nome);
+		}
+		else if(idade == 1) {
+			System.out.printf("%s tem %d ano de idade",nome, idade);
+		}
+		else {
+			System.out.printf("%s tem %d anos de idade",nome, idade);
+		}
+		
 	}
 
 }
