@@ -23,6 +23,12 @@ public class Aula2 {
 		char inicial = 'C';
 		System.out.println(inicial);
 		
+		//boolean
+		boolean casado = true;
+		boolean cr7 = false;
+		
+		System.out.println(casado);
+		System.out.print(cr7);
 		
 	}
 
