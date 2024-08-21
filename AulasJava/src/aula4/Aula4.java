@@ -15,6 +15,7 @@ public class Aula4 {
 		operadorTernario(a,b);
 		comparacaoString();
 		operadoresLogicos(a,b);
+		usandoSwitch();
 	}
 
 	static void operadorTernario(int a, int b) {
@@ -65,5 +66,36 @@ public class Aula4 {
 		//ambos maior que 5 = false
 		//apenas um maior que cinco = true
 		//nenhum maior que 5 = false
+	}
+	
+	static void usandoSwitch() {
+		Scanner kb = new Scanner(System.in);
+		System.out.println("\n\nSwitch");
+		System.out.println("Qual dia devo pagar as contas? ");
+		String conta =  kb.nextLine();
+		String auxConta = conta.toUpperCase();
+		int dia;
+		
+		switch (auxConta) {
+		case "AGUA":
+			dia = 4;
+			break;
+		case "LUZ":
+			dia = 20;
+			break;
+		case "INTERNET", "ALUGUEL":
+			dia = 10;
+			break;
+		case "CONDOMINIO":
+			dia = 15;
+			break;
+		case "GAS":
+			dia = 28;
+			break;
+		default:
+			dia = 1;
+		}
+		
+		System.out.println("A conta " + conta + " deve ser paga dia " + dia);
 	}
 }
