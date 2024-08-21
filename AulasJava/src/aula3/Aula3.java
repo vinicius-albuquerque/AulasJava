@@ -6,30 +6,38 @@ public class Aula3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
-		operacoesBasicas(in);
+		System.out.println("Vamos realizar algumas operações matemáticas o/");
+		System.out.print("Insira um número: ");
+		int a = in.nextInt();
+		System.out.print("Agora outro número: ");
+		int b = in.nextInt();
+		
+		System.out.println("Ok, vamos lá!");
+		operacoesBasicas(a, b);
+		
+		
 		
 	}
 	
-	static void operacoesBasicas(Scanner in) {
-		double a, b;
-		System.out.println("Vamos realizar algumas operações básicas");
-		System.out.println("Insira um número:");
-		a = in.nextDouble();
-		System.out.println("Agora outro número");
-		b = in.nextDouble();
+	static void operacoesBasicas(int a, int b) {
+		System.out.println("\nOperações básicas:");
+		int soma = a + b;
+		int subt = a - b;
+		int mult = a * b;
+		double divs = (double) a / b;
+		int rsto = a % b;
 		
-		System.out.println("Ok, vamos lá!");
-		double soma = a + b;
-		double subt = a - b;
-		double mult = a * b;
-		double divs = a / b;
-		double rsto = a % b;
+		System.out.printf("\nA soma de %d e %d é %d", a, b, soma);
+		System.out.printf("\nSubtraindo  %d de %d é %d", b, a, subt);
+		System.out.printf("\nA multiplicação de %d e %d é %d", a, b, mult);
+		System.out.printf("\nA divisão de %d por %d é %.2f", a, b, divs);
+		System.out.printf("\nO resto da divisão de %d por %d é %d", a, b, rsto);
+	}
+	
+	static void operacoesUnarias(double a, double b) {
+		System.out.println("\nOperações unárias:");
 		
-		System.out.printf("\nA soma de %f e %f é %f", a, b, soma);
-		System.out.printf("\nSubtraindo  %f de %f é %f", b, a, subt);
-		System.out.printf("\nA multiplicação de %f e %f é %f", a, b, mult);
-		System.out.printf("\nA divisão de %f por %f é %f", a, b, divs);
-		System.out.printf("\nO resto da divisão de %f por %f é %f", a, b, rsto);
+		System.out.println("Dado um numero %.2f");
 	}
 
 }
