@@ -14,6 +14,7 @@ public class Aula4 {
 		
 		operadorTernario(a,b);
 		comparacaoString();
+		operadoresLogicos(a,b);
 	}
 
 	static void operadorTernario(int a, int b) {
@@ -40,5 +41,29 @@ public class Aula4 {
 		comp3 = (animal1.equals(animal3))?"igual":"diferente";
 		System.out.println("Comparação 3: " + comp3);
 		System.out.println("A mesma logica se dá a todos os objetos e classes involucros (new Integer(), new Double(), New String() etc.");
+	}
+	
+	static void operadoresLogicos(int x, int y) {
+		boolean ex;
+		
+		System.out.println("\n\nx = " + x + "  y = " + y);
+		//Operador E && AND
+		ex = x>5 && y>5;
+		System.out.println("x E y maior que 5? " + ex);
+		
+		//Operador OU || OR
+		ex = x>5 || y>5;
+		System.out.println("x OU y maior que 5? " + ex);
+		
+		//Uso do não
+		ex = !(x==5) && (y>5);
+		System.out.println("x não maior que 5 E y maior que 5? " + ex);
+		
+		//Operador Exclusivo / AND
+		ex = (x>5) ^ (y>5);
+		System.out.println("ou x maior que 5 ou y e exclusivamente y maior que 5? " + ex);
+		//ambos maior que 5 = false
+		//apenas um maior que cinco = true
+		//nenhum maior que 5 = false
 	}
 }
