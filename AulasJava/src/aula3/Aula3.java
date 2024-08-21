@@ -15,12 +15,12 @@ public class Aula3 {
 		System.out.println("Ok, vamos lá!");
 		operacoesBasicas(a, b);
 		
-		
+		operacoesUnarias(a, b);
 		
 	}
 	
 	static void operacoesBasicas(int a, int b) {
-		System.out.println("\nOperações básicas:");
+		System.out.println("\n\nOperações básicas:");
 		int soma = a + b;
 		int subt = a - b;
 		int mult = a * b;
@@ -34,10 +34,18 @@ public class Aula3 {
 		System.out.printf("\nO resto da divisão de %d por %d é %d", a, b, rsto);
 	}
 	
-	static void operacoesUnarias(double a, double b) {
-		System.out.println("\nOperações unárias:");
+	static void operacoesUnarias(int a, int b) {
+		System.out.println("\n\nOperações unárias:");
 		
-		System.out.println("Dado um numero %.2f");
+		int auxa = a;
+		int auxb = b;
+		System.out.printf("\nDado um número %d, podemos somar +1 através do comando ++número, que resulta: %d", auxa, ++auxa);
+		System.out.printf("\nUtilizando a mesma lógica para número que agora é igual a %d, o comando --número retorna ao valor anterior, ou seja, temos: %d", auxa, --auxa);
+		
+		System.out.println("Mas, atenção!");
+		System.out.printf("Existe também o comando número-- ou número++, essa operação não modifica o número na mesma conta, refletindo apenas na chamada seguinte");
+		System.out.printf("\nEntão, dado x = %d e y = %d, x + y++ = %d e não %d", a, b, auxa + auxb++, auxa+auxb);
+		System.out.printf("\nObserve que mesmo assim y foi modificado para %d, agora a conta n1 + n2 será igual a %d", auxb, auxa + auxb);
 	}
 
 }
