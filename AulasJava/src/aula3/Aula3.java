@@ -66,10 +66,40 @@ public class Aula3 {
 		System.out.println("\nExemplos");
 		System.out.printf("\nMath.PI = %.4f, o pi, neste caso com 4 casas decimais", Math.PI);
 		System.out.printf("\nDado x = %d e y = %d", a, b);
-		System.out.printf("\n	x ^ y = %.0f", (double) Math.pow(a, b));
-		System.out.printf("\n	raiz quadrada de x = %.2f", (double) Math.sqrt(a));
-		System.out.printf("\n	raiz cúbica de y = %.2f", (double) Math.cbrt(b));
+		System.out.printf("\n	x ^ 3 = %.0f", (double) Math.pow(a, 3));
+		System.out.printf("\nraiz quadrada de x = %.2f", (double) Math.sqrt(a));
+		System.out.printf("\nraiz cúbica de y = %.2f", (double) Math.cbrt(b));
+		System.out.printf("\no número negativo -100, seu modulo é %d", Math.abs(-100));
 		
+		System.out.println("\n\nArredondamentos");
+		double aux = Math.sqrt(5);
+		System.out.printf("\nConsiderando a raiz quadrada de 5 = %.8f", aux);
+		System.out.print("\n	Arredonando:");
+		System.out.printf("\n	para baixo = %.0f", Math.floor(aux));
+		System.out.printf("\n	para cima  = %.0f", Math.ceil(aux));
+		System.out.printf("\n	aritmético = %d", Math.round(aux));
+		
+		System.out.println("\n\nNúmeros aleatórios");
+		System.out.println("Os numeros gerados são maiores ou iguais a 0,0 e menores que 1,0, portanto precisamos multiplicar por multiplos de 10 para alcançar o range desejado");
+		System.out.print("10 números inteiros entre 0 e 9\n");
+		for(int i = 0; i<9; i++) {
+			if(i < 8) {
+				System.out.printf("%d, ", (int) (Math.random() * 10));
+			}
+			else {
+				System.out.printf("%d", (int) (Math.random() * 10));
+			}
+		}
+		
+		System.out.print("\n10 números reais entre 0 e 9.9\n");
+		for(int i = 0; i<9; i++) {
+			if(i < 8) {
+				System.out.printf("%.1f , ", (Math.random() * 10));
+			}
+			else {
+				System.out.printf("%.1f", (Math.random() * 10));
+			}
+		}
 		
 		
 	}
