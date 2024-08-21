@@ -46,6 +46,7 @@ public class Aula3 {
 		System.out.printf("Existe também o comando número-- ou número++, essa operação não modifica o número na mesma conta, refletindo apenas na chamada seguinte");
 		System.out.printf("\nEntão, dado x = %d e y = %d, x + y++ = %d e não %d", a, b, auxa + auxb++, auxa+auxb);
 		System.out.printf("\nObserve que mesmo assim y foi modificado para %d, agora a conta n1 + n2 será igual a %d", auxb, auxa + auxb);
+		System.out.println("Ótimo, agora sabemos também a diferença de pré e pós incremento");
 	}
 
 }
